@@ -1,0 +1,22 @@
+[project]
+name = "project"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Moises",email = "moisessampaio19052005@hotmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "sqlalchemy (>=2.0.40,<3.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "alembic (>=1.15.2,<2.0.0)",
+]
+
+[tool.poetry]
+packages = [{include = "project", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

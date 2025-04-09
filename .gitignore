@@ -1,0 +1,10 @@
+.db
+.ini
+poetry.lock
+__pycache__/
+src/project/alembic.ini
+src/project/database.db
+.venv
+README.md
+tests
+src/project/Migrations
