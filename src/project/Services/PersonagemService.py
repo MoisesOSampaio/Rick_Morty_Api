@@ -9,7 +9,7 @@ class PersonagemService:
     def __init__(self, personagemRepository):
         self.__personagemRepository = personagemRepository
 
-    def tratarDados(lista):
+    def tratarDados(self,lista):
         personagem : Personagem
         personagens: list[Personagem] = []
         for elemento in lista:

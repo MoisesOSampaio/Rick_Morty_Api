@@ -11,5 +11,5 @@ class PersonagemController:
         
     def cadastrarPersonagens(self):
         services = self.__personagemService
-        data = Request.getData()
+        data = Request.getData('https://rickandmortyapi.com/api/character/')
         services.inserindoDados(data['results'])

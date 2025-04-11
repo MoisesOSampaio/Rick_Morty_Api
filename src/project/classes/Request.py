@@ -3,7 +3,6 @@ import requests
 class Request:
     @staticmethod
     def getData(url):
-        url = "https://rickandmortyapi.com/api/character/"
         try:
             response = requests.get(url)
             response.raise_for_status()  # Levanta um erro se o status não for 200
