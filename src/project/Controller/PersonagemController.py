@@ -1,5 +1,5 @@
 from Services.PersonagemService import PersonagemService
-import requests
+from classes.Request import Request
 
 
 class PersonagemController:
@@ -10,12 +10,6 @@ class PersonagemController:
 
         
     def cadastrarPersonagens(self):
-        url = "https://rickandmortyapi.com/api/character/"
         services = self.__personagemService
-        try:
-            response = requests.get(url)
-            response.raise_for_status()  # Levanta um erro se o status não for 200
-            data = response.json()
-        except requests.exceptions.RequestException as e:
-            return {"error": "Erro ao buscar personagem", "details": str(e)}
+        data = Request.getData()
         services.inserindoDados(data['results'])

@@ -7,7 +7,6 @@ class PersonagemRepository:
     def inserir(personagens : list[Personagem]):
         for personagem in personagens:
             session.add(personagem)
-        
         try:
             session.commit()
         except SQLAlchemyError as e:
